@@ -4,7 +4,7 @@ const os = require('os');
 var app = express();
 function data(ip, oper, lang) {
   return {
-    "ip": ip,
+    "ip": ip.replace(/^.*:/, ''),
     "Operating System": oper,
     "Language": lang,
   };
